@@ -1,0 +1,27 @@
+name: ______________________________  # Nombre del workflow
+
+on: # Define cuándo se ejecuta el pipeline
+  push:
+    branches: ["________"] # El workflow se ejecuta cada vez que alguien hace push a main
+  pull_request:
+    branches: ["________"] # El workflow se ejecuta cuando se abre o actualiza un Pull Request hacia main
+
+jobs:
+  test: # Identificador del job
+    runs-on: ______________________________ # Indica en qué sistema operativo se ejecuta el job
+
+    steps: # Lista de acciones secuenciales que se ejecutan dentro del job
+      - uses: ______________________________ # Descarga el código del repositorio en la máquina de CI
+
+      - uses: actions/setup-python@v5 # Instala Python en la máquina de CI
+        with:
+          python-version: "3.11" # Versión de Python
+
+      - name: Install dependencies 
+        run: | # Ejecuta comandos de consola
+          ______________________________
+
+      - name: Run integration test with fake 
+        run: |
+          export PYTHONPATH=$GITHUB_WORKSPACE
+          ___________________________________
