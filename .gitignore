@@ -1,4 +1,4 @@
 __pycache__/
 *.pyc
 .pytest_cache/
-orders_app/orders_app/orders.db
+orders.db
